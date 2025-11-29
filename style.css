@@ -1,0 +1,190 @@
+/* Css Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root */
+:root {
+  --green-color: #16ff00;
+  --white-color: #f5f5f5;
+  --gray-color: #cdcccc;
+  --black-color: #121212;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+body {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 7px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+button:hover {
+  box-shadow: 0 0 60px rgb(223, 223, 223);
+  scale: 0.8;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+header h1 {
+  text-shadow: 0 0 40px rgb(223, 223, 223);
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav .special-link {
+  color: var(--green-color);
+}
+
+header button {
+  font-size: 20px;
+  display: none;
+}
+
+.hero {
+  background-image: url(assets/back.jpg);
+  height: 50vh;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.hero-box {
+  max-width: 500px;
+  margin-left: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-box .buttons{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hero-box .buttons button:first-child{
+    background-color: var(--green-color);
+}
+
+.windows-sec{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.windows-sec .info{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.windows-sec .info button{
+    max-height: 50px;
+}
+
+.windows{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+.window{
+    background-image: url(assets/sec2.jpg);
+    min-width: 200px;
+    height: 400px;
+    background-attachment: fixed;
+    border-radius: 40px 40px 0 0 ;
+}
+
+.card-sec{
+    padding: 30px;
+}
+
+.card-sec .info{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 800px;
+    padding: 30px;
+}
+
+.card-sec .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 90px;
+    margin: 50px 0;
+}
+
+.card-sec .cards .card{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid gray;
+}
+
+
+.card-sec .cards .card video{
+    width: 100%;
+}
+
+@media (max-width : 1200px) {
+    .windows-sec {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+}
+
+
+@media (max-width: 900px) {
+  header button {
+    display: block;
+  }
+  header nav {
+    display: none;
+  }
+}
